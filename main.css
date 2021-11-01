@@ -15,7 +15,6 @@ body {
     width: 300px;
     height: 250px;
     display: flex;
-    border-radius: 40px 40px 0px 0px;
     position: relative;
 }
 .front,.back {
@@ -27,6 +26,10 @@ body {
     backface-visibility: hidden;
     transition: transform .5s;
     box-shadow: 8px 8px 5px 5px rgb(207, 207, 207);
+    
+}
+.front {
+    border-radius: 40px 40px 0px 0px;
 }
 .front h1 {
     margin-bottom: 3%;
@@ -44,6 +47,7 @@ img {
     flex-direction: column;
     transform: perspective(800px) rotateX(-180deg);
     visibility: hidden;
+    border-radius: 0px 0px 40px 40px;
 }
 .card:hover .front {
     transform: perspective(800px) rotateX(180deg);
